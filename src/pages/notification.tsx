@@ -7,12 +7,10 @@ import { SectionTwo } from "../components/SectionTwo";
 import {
  NotificationObserver,
  NotificationSingleton,
-} from "../components/utils/notification";
-import { useCount } from "../hooks/useCount";
+} from "../utils/notification";
  
 export const NotificationPage = () => {
  const [notifications, setNotifications] = useState(0);
- const { count, randomCount } = useCount();
  const notification = NotificationSingleton.getInstance();
  
  const principalObserver = new NotificationObserver(() =>

@@ -41,8 +41,6 @@ export class NotificationSubject implements INotificationSubject {
  }
  
  public unSubcribe(observer: Observer): void {
-  console.log(observer);
-  console.log(this.observers);
    const observerIndex = this.observers.indexOf(observer);
    if (observerIndex === -1) {
      return console.log("Subject: Nonexistent observer.");
@@ -56,13 +54,9 @@ export class NotificationSubject implements INotificationSubject {
   * Trigger an update in each subscriber.
   */
  public notify(): void {
-  this.observers.forEach((observer) => {
-    observer.update(this);
-  });
-}
-
-public businessRule(): void {
-  this.notificationsNumber += 1;
-  this.notify()
-}
+   this.notificationsNumber += 1;
+   this.observers.forEach((observer) => {
+     observer.update(this);
+   });
+ }
 }

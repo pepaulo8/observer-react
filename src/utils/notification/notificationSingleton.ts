@@ -12,7 +12,7 @@ export class NotificationSingleton extends NotificationSubject {
  }
  
  /**
-  * The static method that controls the access to the NotificationSingleton instance.
+  * The static method that controls the access to the NotificationSing  leton instance.
   *
   * This implementation let you subclass the NotificationSingleton class while keeping
   * just one instance of each subclass around.

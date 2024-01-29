@@ -3,7 +3,7 @@ import { useCount } from "../../hooks/useCount";
 import {
  NotificationObserver,
  NotificationSingleton,
-} from "../utils/notification";
+} from "../../utils/notification";
  
 export const SectionThree = () => {
  const { randomCount, count } = useCount();
